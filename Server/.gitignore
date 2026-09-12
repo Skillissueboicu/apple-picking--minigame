@@ -1,0 +1,6 @@
+.env
+.env.local
+.env.*.local
+appsettings.Development.local.json
+
+.build/
