@@ -38,21 +38,17 @@ public class PlayerMovement : MonoBehaviour
     private Material spriteMaterial;
     private Rigidbody rb;
 
-    // Stores which direction the sprite is facing.
     private bool facingLeft = false;
 
     private void Awake()
     {
-        // Get Rigidbody if present.
         rb = GetComponent<Rigidbody>();
 
         if (rb != null)
         {
-            // Prevent the player from rotating due to physics.
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
-        // Automatically find the child named "Sprite".
         if (sprite == null)
         {
             Transform child = transform.Find("Sprite");
@@ -63,13 +59,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // Automatically find the Renderer on the Sprite child.
         if (spriteRenderer == null && sprite != null)
         {
             spriteRenderer = sprite.GetComponent<Renderer>();
         }
 
-        // Store the original sprite scale.
         if (sprite != null)
         {
             originalSpriteScale = sprite.localScale;
