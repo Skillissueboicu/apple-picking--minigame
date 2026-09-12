@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class score_script : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+public TMP_Text scoreText;
+private int scoreCount=0;
 
-    // Update is called once per frame
-    void Update()
+    public void AddScore(int scoreToAdd)
     {
-        
+        scoreCount ++ ; scoreText.AddScore(scoreToAdd);
+        UpdateScore.Text= "SCORE: " + scoreCount.ToString();
+
     }
 }

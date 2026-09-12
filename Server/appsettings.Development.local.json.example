@@ -1,5 +1,0 @@
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=DIN-PC\\SQLEXPRESS;Database=FarmerQuest;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True"
-  }
-}
