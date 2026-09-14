@@ -14,7 +14,7 @@ public class player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = new Vector3(-4.2f, 6f, 2.1f);
+        transform.position = new Vector3(-4.2f, 12.14f, 2.1f);
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
