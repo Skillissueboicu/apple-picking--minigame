@@ -4,17 +4,17 @@ using UnityEngine;
 public class collectible : MonoBehaviour
 {
     public static event Action OnCollectibleCollected;
-
+    public int collectValue = 1;
     void Update()
     {
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
-        {
-            OnCollectibleCollected?.Invoke();
+        if (collision.gameObject.CompareTag("Player"))
+        { 
             Destroy(gameObject);
+            collectible_manager.CollectibleCount += collectValue;
         }
     }
 }
